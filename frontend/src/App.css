@@ -1,0 +1,54 @@
+/* Professional English Teacher Website Styles */
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Professional hover effects for buttons */
+button {
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Card hover effects */
+.hover\:shadow-lg {
+    transition: box-shadow 0.3s ease;
+}
+
+.hover\:shadow-xl {
+    transition: box-shadow 0.3s ease;
+}
+
+/* Link transitions */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Prevent layout shift on focus */
+input,
+textarea,
+select {
+    transition: box-shadow 0.2s ease;
+}
