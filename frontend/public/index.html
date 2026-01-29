@@ -144,9 +144,9 @@
     <script>
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-      // Cambia el título cuando el usuario se va de la pestaña
-      let mensaje = "!No pares ahora, el éxito te espera!";
+      let mensaje = "¡No pares ahora, el éxito te espera!";
       let i = 0;
+
       // Intervalo para simular el deslizamiento
       let intervalo = setInterval(() => {
         document.title = mensaje.substring(i) + " " + mensaje.substring(0, i);
@@ -159,6 +159,12 @@
     } else {
       // Restaura el título original cuando regresa
       document.title = "Raul Pinillos Teacher";
+
+      // Detener el intervalo activo
+      if (document._intervaloTitulo) {
+        clearInterval(document._intervaloTitulo);
+        document._intervaloTitulo = null;
+      }
     }
   });
 </script>
